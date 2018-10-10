@@ -18,7 +18,7 @@ Build the Docker Image with the accompanied Dockerfile, and use `docker run` to 
 
 An example (assuming the image name is `pytorch_nightly:latset` and the working directory is the root of the project.):
 
-```
+```bash
 docker run --runtime=nvidia -ti -v (pwd):/home/docker --rm pytorch_nightly:latest bash
 ```
 
@@ -32,6 +32,24 @@ You'll have to build the latest PyTorch from source or use an older PyTorch vers
 
 ## CLI Usage Example
 
+```bash
+python cli.py --subject content_images/wave_small.jpg --style style_images/kngwa_small.jpg --output wave_kngwa.jpg --steps 100 --log_interval 10
 ```
-python cli.py --subject content_images/wave_small.jpg --style style_images/kngwa_small.jpg --output wave_kngwa.jpg--steps 100 --log_interval 10
-```
+
+## Demo
+
+### The Great Wave off Kanagawa
+
+Style:
+
+![The Great Wave](style_images/kngwa_small.jpg)
+
+![wave_kngwa](media/wave_kngwa.gif)
+
+### Ribbon Mossaic
+
+Style:
+![Ribbon Mossaic](style_images/ribbon_mosaic_small.jpg)
+
+Results:
+![wave_mossaic](media/wave_mossaic.gif)
