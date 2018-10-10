@@ -92,7 +92,7 @@ def test_cal_l2_wass_dist():
             root_cov_x.numpy()
         )
         var_overlap = np.sum(
-            np.sqrt(np.clip(np.linalg.eigvals(cov_prod), 0.01, 1e10)))
+            np.sqrt(np.clip(np.linalg.eigvals(cov_prod), 1e-5, 1e10)))
         dist_numpy = mu_diff_squared + tr_cov_x.numpy() + tr_cov_y.numpy() - \
             2 * var_overlap
         np.testing.assert_almost_equal(dist.numpy(), dist_numpy)

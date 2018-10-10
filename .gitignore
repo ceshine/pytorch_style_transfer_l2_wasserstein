@@ -4,3 +4,6 @@ __pycache__
 .coverage
 *.egg-info
 .vscode
+log
+.bash_history
+.python_history

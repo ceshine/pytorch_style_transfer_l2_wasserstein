@@ -40,7 +40,7 @@ def calc_l2_wass_dist(content_desc, style_desc):
     cov_prod = style_root_cov.mm(cont_cov).mm(style_root_cov)
     # trace of sqrt of matrix is sum of sqrts of eigenvalues
     var_overlap = torch.sqrt(torch.clamp(torch.symeig(
-        cov_prod, eigenvectors=True)[0], 0.01)).sum()
+        cov_prod, eigenvectors=True)[0], 1e-5)).sum()
 
     mu_diff_squared = torch.sum((cont_mu - style_mu) ** 2)
 
