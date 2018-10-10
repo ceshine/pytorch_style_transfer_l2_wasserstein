@@ -40,16 +40,12 @@ python cli.py --subject content_images/wave_small.jpg --style style_images/kngwa
 
 ### The Great Wave off Kanagawa
 
-Style:
+![The Great Wave](style_images/kngwa_small.jpg | width=500)
 
-![The Great Wave](style_images/kngwa_small.jpg)
-
-![wave_kngwa](media/wave_kngwa.gif)
+![wave_kngwa](media/wave_kngwa.gif | width=500)
 
 ### Ribbon Mossaic
 
-Style:
-![Ribbon Mossaic](style_images/ribbon_mosaic_small.jpg)
+![Ribbon Mossaic](style_images/ribbon_mosaic_small.jpg | width=500)
 
-Results:
-![wave_mossaic](media/wave_mossaic.gif)
+![wave_mossaic](media/wave_mossaic.gif | width=500)
