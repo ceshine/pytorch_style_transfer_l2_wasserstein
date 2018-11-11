@@ -1,4 +1,4 @@
-# PyTorch Implementatino of Style Transfer as Optimal Transport
+# PyTorch Implementation of Style Transfer as Optimal Transport
 
 [Style Transfer as Optimal Transport - Paper and Tensorflow Implementation](https://github.com/VinceMarron/style_transfer)
 
