@@ -12,8 +12,8 @@ from .vgg_model import VggNetwork
 from .loss_function import calc_style_desc, calc_l2_wass_dist
 
 
-LAYERS_TO_USE = ["relu1", "relu2", "relu3", "relu4", "relu5"]
-WEIGHTS = np.array([1 / 64, 1 / 128, 1 / 256, 1 / 512, 1/512]) * 1e3
+LAYERS_TO_USE = ["conv1", "conv3"]
+WEIGHTS = np.array([1, 1]) * 1e2
 DEVICE = torch.device("cuda")
 LOG_DIR = Path("log")
 LOG_DIR.mkdir(exist_ok=True)
@@ -91,7 +91,7 @@ class StyleTransfer:
             loss.backward(retain_graph=True)
             if self.log_interval > 0 and self.n_iter % self.log_interval == 0:
                 self.save_images(content_tensor.unsqueeze(0).to(
-                    "cpu").detach().numpy(), LOG_DIR / f"{self.n_iter}.jpg")
+                    "cpu").detach().numpy(), LOG_DIR / f"{self.n_iter:03d}.jpg")
             return loss
 
         optimizer.step(closure)

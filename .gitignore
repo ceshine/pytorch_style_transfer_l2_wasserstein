@@ -9,3 +9,5 @@ log
 .python_history
 .nv
 .torch
+*.jpg
+.mypy_cache/

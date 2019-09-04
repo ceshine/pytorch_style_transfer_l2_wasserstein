@@ -4,7 +4,7 @@ import torch
 import torchvision.models.vgg as vgg
 
 LossOutput = namedtuple(
-    "LossOutput", ["relu1", "relu2", "relu3", "relu4", "relu5"])
+    "LossOutput", ["conv1", "conv2", "conv3", "conv4", "conv5"])
 
 
 class VggNetwork(torch.nn.Module):
@@ -16,11 +16,11 @@ class VggNetwork(torch.nn.Module):
         super(VggNetwork, self).__init__()
         self.vgg_layers = vgg.vgg19(pretrained=True).features
         self.layer_name_mapping = {
-            '3': "relu1",
-            '8': "relu2",
-            '17': "relu3",
-            '26': "relu4",
-            '35': "relu5",
+            '2': "conv1",
+            '7': "conv2",
+            '16': "conv3",
+            '25': "conv4",
+            '34': "conv5",
         }
 
     def forward(self, x) -> namedtuple:
